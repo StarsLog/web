@@ -25,9 +25,6 @@ $nav-link-disabled-color:var(--bs-primary);
     :global{
         .user-icon, .menu-icon{
             color:$sc-white;
-            padding: 0;
-            margin: 0;
-            line-height: 0;
         }
 
         .login{
@@ -37,6 +34,9 @@ $nav-link-disabled-color:var(--bs-primary);
                 &::after{
                     display: none;
                 }
+            }
+            .dropdown-menu {
+                position: absolute;
             }
             &-menu{
                 min-width: 320px;

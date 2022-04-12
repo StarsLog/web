@@ -18,6 +18,22 @@ const IndexPage: NextPageWithLayout = () => {
         </Head>
         <div className='container'>
             <h1 className='tertiary'>Documentation</h1>
+            <h2 className='tertiary'>Sync SC location</h2>
+            <h4>Methods</h4>
+            <ul>
+              <li>You can create your own tool to extract from your notepad the location when you write on the ingame chat "/showlocation" and attack to Stars Log API</li>
+              <li>With AutoHotKey and using the provided scripts (that you can modify or create new ones) that automatically keep all in sync</li>
+            </ul>
+            <h4>AutoHotKey</h4>
+            <h6>Script</h6>
+              <p><a href="https://gist.github.com/danidomen/f7f484cda766191bdf1a01b052f27412" target={'_blank'}>https://gist.github.com/danidomen/f7f484cda766191bdf1a01b052f27412</a></p>
+            <h6>How it works</h6>
+            <ul>
+              <li>Install AutoHotKey if you don't have it <a href="https://www.autohotkey.com/" target={'_blank'}>https://www.autohotkey.com/</a></li>
+              <li>Once you download the scripts from Gist, you need to edit StarsLog.ahk and put your Api Token on the script. Once good, you can execute it</li>
+              <li>Start Star Citizen, and when you are ingame, you can click "SHIFT+M" to start the script and send automatically the chat command "/showlocation". This executes each 30 sec, once you click again SHIFT+M or stop the AHK Script</li>
+              <li>You can modify the script like the time, or the keys that execute the program</li>
+            </ul>
             <h2 className='tertiary'>API</h2>
             <h4>Endpoint</h4>
             <p>URL - {publicRuntimeConfig.API_ENDPOINT}</p>

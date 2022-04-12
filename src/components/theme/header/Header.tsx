@@ -61,13 +61,13 @@ const Header = () => {
                                     <img src="/images/starslog_logo.png" height="40" alt="logo"/>
                                 </a>
                             </Link>
-                            <div className="d-flex lf-header-icons d-lg-none">
-                                <div className="h2 d-block d-lg-none user-icon lf-header-icons-user">
+                            <div className="d-flex d-lg-none">
+                                <div className="">
                                     <LoginForm/>
                                 </div>
                             </div>
                             <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                                <ul className="navbar-nav mx-auto text-center">
+                                <ul className="navbar-nav mx-auto text-center flex-row justify-content-center">
                                     
                                     <li className='nav-item p-1'>
                                         {router.asPath != '/' ? 
@@ -92,10 +92,14 @@ const Header = () => {
                                             </a>
                                         </Link>
                                     </li>
-                                    
+                                    <li className="nav-item p-1">
+                                        <a target={'_blank'} href='https://github.com/StarsLog/web'>
+                                            <Button type="primary" title='Go to GitHub' text={<i className="lab la-github fs-4"></i>} onclick={() => setSidebarOpen(false)}/>
+                                        </a>
+                                    </li>
                                 </ul>
                             </div> 
-                            <div className="navbar-nav d-none d-lg-flex ms-2 lf-header-icons">
+                            <div className="navbar-nav d-none d-lg-flex ms-2">
                                 <div className="">
                                     <LoginForm/>
                                 </div>

@@ -13,7 +13,6 @@ class MyDocument extends Document {
           j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
           })(window,document,'script','dataLayer','${process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER}');`}}></script>
-
           <link rel="preconnect" href="https://fonts.googleapis.com"/>
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin='crossorigin'/>
           <link href="https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"/>
@@ -32,9 +31,8 @@ class MyDocument extends Document {
           <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png"/>
           <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
           <link rel="manifest" href="/manifest.json"/>
-          <meta name="msapplication-TileColor" content="#ffffff"/>
+          <meta name="msapplication-TileColor" content="#FFE973"/>
           <meta name="msapplication-TileImage" content="/ms-icon-144x144.png"/>
-          <meta name="theme-color" content="#ffffff"/>
           <meta name="theme-color" content="#FFE973" />
           <meta name="msapplication-navbutton-color" content="#FFE973"/>
           <meta name="apple-mobile-web-app-status-bar-style" content="#FFE973"/>
