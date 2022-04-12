@@ -1,0 +1,433 @@
+.form-check-input[type=checkbox]{
+    border: 1px solid $blue;
+    border-radius: 2px;
+
+    .form-switch &{
+        border-radius: 10px;
+        height: 20px;
+        width: 38px;
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-3.5 -3.5 7 7'%3e%3ccircle r='3' fill='%232A04C3'/%3e%3c/svg%3e");
+        &:hover,&.hover,&:focus,&.focus{
+            border: 1px solid $brh-blue;
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-3.5 -3.5 7 7'%3e%3ccircle r='3' fill='%234A5FFB'/%3e%3c/svg%3e");
+        }
+        &:checked{
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-3.5 -3.5 7 7'%3e%3ccircle r='3' fill='%23FFF'/%3e%3c/svg%3e");
+            &:disabled,&.disabled{
+                background-color: $blue;
+            }
+        }
+    }
+
+    &:hover,&.hover{
+        border: 2px solid $brh-blue;
+        &:checked{
+            background-color: $brh-blue;
+        }
+    }
+    &:focus,&.focus{
+        border: 1px solid $brh-blue;
+        box-shadow: 0 0 5px 2px $brh-turqs;
+        &:checked{
+            background-color: $brh-blue;
+        }
+    }
+    &:disabled,&.disabled{
+        border: 1px solid $black;
+        opacity: 0.4;
+        &:checked{
+            background-color: $black;
+        }
+    }
+}
+.form-check-input[type=radio],.form-check-input[type=checkbox]{
+    .bg-black-blue &{
+        border: 1px solid $gold;
+        &:hover,&.hover{
+            border: 2px solid $brh-gold;
+            &:checked{
+                background-color: $brh-gold;
+            }
+        }
+        &:focus,&.focus{
+            border: 1px solid $brh-gold;
+            &:checked{
+                background-color: $brh-gold;
+            }
+        }
+        &:checked{
+            background-color: $gold;
+            &[type=checkbox]{
+                background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/%3e%3c/svg%3e");
+            }
+        }
+    }
+}
+
+
+.form-check-input[type=radio]{
+    border: 1px solid $blue;
+    
+    &:hover,&.hover{
+        border: 2px solid $brh-blue;
+        &:checked{
+            border: 1px solid $brh-blue;
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%234A5FFB'/%3e%3c/svg%3e");
+            background-color: #fff;
+        }
+    }
+    &:focus,&.focus{
+        border: 1px solid $brh-blue;
+        box-shadow: 0 0 5px 2px $brh-turqs;
+        &:checked{
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%234A5FFB'/%3e%3c/svg%3e");
+            background-color: #fff;
+        }
+    }
+    &:disabled,&.disabled{
+        border: 1px solid $black;
+        opacity: 0.4;
+        &:checked{
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%23000'/%3e%3c/svg%3e");
+            background-color: #fff;
+        }
+    }
+
+    &:checked{
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%232A04C3'/%3e%3c/svg%3e");
+        background-color: #fff;
+    }
+}
+
+.form-control, .form-floating .form-control {
+    padding: 0.95rem 1.125rem;
+    font-size: 1rem;
+    line-height: 1rem;
+    border-radius: 8px;
+    letter-spacing: 0;
+    border: 1px solid $gray-500;
+    height: calc(3rem + 4px);
+    background-color: transparent;
+    .bg-black-blue &{
+        background: rgba(255,255,255,0.10);
+        color: $white;
+    }
+    &::placeholder{
+        font-weight: 200;
+        color: $gray-500;
+    }
+    &:focus{
+        box-shadow: 0 0 5px 1px $brh-turqs;
+        border-color: $brh-blue;
+        background-color: transparent;
+        .bg-black-blue &{
+            background: $white;
+            color: $black;
+            border-color: $brh-gold;
+        }
+    }
+    &:not(:disabled):hover{
+        border-color: $brh-blue;
+        .bg-black-blue &{
+            border-color: $brh-gold;
+        }
+    }
+    &.is-invalid,&:invalid{
+        border-color: $danger;
+        background-image: url("data:image/svg+xml,<svg stroke='currentColor' fill='%23DC3545' stroke-width='0' viewBox='0 0 24 24' height='1.5em' width='1.5em' xmlns='http://www.w3.org/2000/svg'><path fill='none' d='M0 0h24v24H0V0z' opacity='.87'></path><path d='M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.59-13L12 10.59 8.41 7 7 8.41 10.59 12 7 15.59 8.41 17 12 13.41 15.59 17 17 15.59 13.41 12 17 8.41z'></path></svg>");
+        background-repeat: no-repeat;
+        background-position: right calc(0.375em + 0.1875rem) center;
+        background-size: calc(1.25em + 0.375rem) calc(1.25em + 0.375rem);
+    }
+    &:disabled{
+        opacity: 0.3;
+        & + label{
+            opacity: 0.3;
+        }
+    }
+}
+
+.custom-select{
+    label{
+        &.floating, .custom-select:focus-within{
+            font-size: 14px;
+            transform: scale(0.85) translateY(-0.4rem) translateX(0.2rem);
+        }
+    }
+    
+    &__control{
+        border-radius: 8px !important;
+        .bg-black-blue &{
+            background: rgba(255,255,255,0.10);
+        }
+        &:focus,&--is-focused{
+            box-shadow: 0 0 5px 1px $brh-turqs !important;
+            border-color: $brh-blue;
+            .bg-black-blue &{
+                border-color: $drk-gold;
+            }
+        }
+        &:not(:disabled):hover{
+            border-color: $brh-blue;
+            .bg-black-blue &{
+                border-color: $brh-gold;
+            }
+        }
+        &:disabled{
+            opacity: 0.3;
+        }
+    }
+    &__value-container{
+        padding: 15px 1.125rem !important;
+        line-height: 1rem;
+        font-weight: 200;
+        &--has-value{
+            padding: 24px 1rem 8px 1rem !important;
+            font-weight: 400;
+            .custom-select__single-value{
+                .bg-black-blue &{
+                    color: $white;
+                }
+            }
+        }
+    }
+    &__indicator-separator{
+        display: none;
+    }
+
+    &__menu {
+        border-radius: 8px !important;
+        border-top-right-radius: 0px !important;
+        border-top-left-radius: 0px !important; 
+        margin-top: -9px !important;
+        box-shadow: none !important;
+        z-index: 3 !important;
+        border: 1px solid $blue;
+        .bg-black-blue &{
+            color: $black;
+            border-color: $brh-gold;
+        }
+    }
+
+    &__option{
+        &--is-selected{
+            background: transparent !important;
+            color: $black !important;
+            font-weight: bold;
+        }
+        &--is-focused{
+            background: $brh-turqs !important;
+            color: $black;
+
+            .bg-black-blue &{
+                background: $lght-gold !important;
+            }
+        }
+    }
+
+}
+
+
+.form-floating{
+    label{
+        font-weight: 200;
+        color: $gray-500;
+        padding: 0.85rem 1.125rem;
+    }
+    & > .form-control:focus ~ label, & > .form-control:not(:placeholder-shown) ~ label, & > .form-select ~ label {
+        font-size: 14px;
+        transform: scale(0.85) translateY(-0.4rem) translateX(0.2rem);
+        opacity: 1;
+    }
+}
+
+.input-group, .form-floating{
+    &:focus-within{
+        label{
+            color: $brh-blue;
+            .bg-black-blue &{
+                color: $drk-gold;
+                z-index: 3;
+            }
+        }
+        .input-icon{
+            color: $brh-blue;
+            .bg-black-blue &{
+                color: $drk-gold;
+            }
+        }
+    }
+    &:hover{
+        .input-icon{
+            color: $brh-blue;
+            .bg-black-blue &{
+                color: $brh-gold;
+            }
+        }
+    }
+}
+
+.input-group{
+    &.form-floating{
+        & > .form-control:focus ~ label, & > .form-control:not(:placeholder-shown) ~ label, & > .form-select ~ label {
+            &:is(:nth-child(3)){
+                transform: scale(0.85) translateY(-0.4rem) translateX(0.5rem);
+            }
+        }
+        label{
+            padding: 0.85rem 2.45rem;
+        }
+    }
+    input:not(:first-child){
+        padding-left: 2.45rem;
+        border-radius: 8px !important;
+    }
+    input:is(:first-child){
+        border-radius: 8px !important;
+        & + label{
+            padding: 0.85rem 1.2rem;
+        }
+    }
+    .input-icon {
+        font-size: 1.5rem;
+        color: $gray-500;
+        left: 10px;
+        top: 5px;
+        position: absolute;
+        &.pe-auto{
+            cursor: pointer;
+            z-index: 2;
+            &:hover, &:focus{
+                color: $brh-blue;
+                .bg-black-blue &{
+                    color: $drk-gold;
+                }
+            }
+        }
+        &:is(:last-child){
+            right: 10px;
+            left: auto;
+        }
+    }
+}
+
+.sc-input{
+    .input-icon{
+        z-index: 1;
+        &:is(:last-child){
+            right: 16px;
+        }
+    }
+    & > .form-control:focus ~ label, & > .form-control:not(:placeholder-shown) ~ label, & > .form-select ~ label {
+        font-size: 14px;
+        transform: scale(0.85) translateY(-0.4rem) translateX(4px);
+        opacity: 1;
+        font-weight: 400;
+        &:is(:nth-child(3)){
+            transform: scale(0.85) translateY(-0.4rem) translateX(6px)!important;
+        }
+    }
+    &:after,&:before{
+        content: '';
+        position: absolute;
+        border-radius: 4px;
+        -webkit-mask-image: none,url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 24 24"%3E%3Cpath d="M0 0h4.7a8 8 0 015.6 2.3l11.4 11.4a8 8 0 012.3 5.6V24H0V0z" fill="%23000"/%3E%3C/svg%3E'),none,url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 24 24"%3E%3Cpath d="M24 24h-4.7a8 8 0 01-5.6-2.3L2.3 10.3A8 8 0 010 4.7V0h24v24z" fill="%23000"/%3E%3C/svg%3E'),linear-gradient(#000, #000),linear-gradient(#000, #000),linear-gradient(#000, #000),linear-gradient(#000, #000),linear-gradient(#000, #000);
+        -webkit-mask-size: 0px 0px,20px 20px,0px 0px,20px 20px,calc(100% - 18px) 1px,21px calc(100% - 18px),calc(100% - 38px) calc(100% + 2px),21px calc(100% - 18px),calc(100% - 18px) 1px;
+        -webkit-mask-position: left top,right top,right bottom,left bottom,-1px top,left -1px,19px -1px,right 19px,19px bottom;
+        -webkit-mask-repeat: no-repeat;
+        z-index: 0;
+    }
+    &:before{
+        background-color: $gray-400;
+        transition: background-color .25s ease;
+        inset: 0;
+    }
+    &:after{
+        background-color: $white;
+        transition: background-color .25s ease;
+        inset: 6px;
+        .bg-black-blue &{
+            background-color: $black;
+        }
+    }
+    &:focus, &:focus-within{
+        &:before{
+            background-color: #9f957c;
+        }
+    }
+    label{
+        z-index: 1;
+    }
+    input{
+        z-index: 1;
+        &:is(:first-child) + label {
+            padding: 14px 25px;
+        }
+        &:not(:first-child) {
+            padding-left: 2.45rem;
+            padding-left: 40px;
+        }
+        .bg-black-blue &{
+            background-color: transparent!important;
+        }
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button{
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        &[type=number]{
+            -moz-appearance: textfield;
+        }
+    }
+    .form-control{
+        border: transparent;
+        padding: 15px 25px;
+        &:focus{
+            box-shadow: none;
+            border-color: transparent;
+            background-color: transparent;
+            .bg-black-blue &{
+                background: transparent;
+                color: $white;
+                border-color: transparent;
+            }
+        }
+        &[readonly]{
+            background: transparent;
+        }
+        
+    }
+    &.custom-select{
+        .custom-select__control{
+            background: none;
+            border: none;
+            z-index: 1;
+            box-shadow: none!important;
+        }
+        label{
+            &.floating{
+                font-weight: 400;
+            }
+        }
+    }
+    
+    .invalid-feedback{
+        z-index: 1;
+        text-align: center;
+        margin-top: 0px;
+        margin-bottom: 12px;
+    }
+}
+
+
+.assistive-text{
+    font-size: 12px;
+    color: $gray-400;
+    letter-spacing: 0;
+    line-height: 12px;
+    font-weight: 200;
+    display: block;
+    margin-top: 6px;
+    font-weight: 400;
+}
+

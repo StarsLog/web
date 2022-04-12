@@ -1,0 +1,73 @@
+@import "../../../styles/theme/bs_variables";
+$menu-fs : 1.1rem;
+$menu-placeholder-color: rgb(186, 186, 186);
+$menu-bg: $sc-blue-dark;
+$menu-fw: 400;
+$nav-link-disabled-color:var(--bs-primary);
+
+
+.logo {
+    height: 40vmin;
+    pointer-events: none;
+}
+  
+.header {
+    background-color: $menu-bg;
+    font-size: $menu-fs;
+    font-weight: $menu-fw;
+    width: 100%;
+    z-index: 5;
+    top: 0;
+    border-bottom: 1px solid $sc-gray-400;
+    -webkit-box-shadow: 0px 5px 15px 3px rgba(0,0,0,0.04); 
+    box-shadow: 0px 5px 15px 3px rgba(0,0,0,0.04);
+
+    :global{
+        .user-icon, .menu-icon{
+            color:$sc-white;
+            padding: 0;
+            margin: 0;
+            line-height: 0;
+        }
+
+        .login{
+            &-icon{
+                color: $sc-white;
+                font-size: 1.75rem;
+                &::after{
+                    display: none;
+                }
+            }
+            &-menu{
+                min-width: 320px;
+                left: auto!important;
+                right: 0px;
+                max-width: 360px;
+                width: calc(100vh);
+                padding: 1rem;
+            }
+        }
+
+        
+            
+        
+        
+
+        .navbar-dark{
+            .navbar-nav {
+                .nav-link{
+                    &:not(.disabled){
+                        color: $sc-white;
+                    }
+                    &.active{
+                        font-weight: 900;   
+                    }
+                }
+            }
+        } 
+        
+        
+    }
+    
+    
+}

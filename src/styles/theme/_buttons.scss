@@ -1,0 +1,153 @@
+.btn {
+    border-radius: 4px;
+    line-height: 1rem;
+    padding: .875rem 1.25rem;
+    letter-spacing: 1px;
+    font-weight: 500;
+    -webkit-mask-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 24 24"%3E%3Cpath d="M0 24v-4.7a8 8 0 012.3-5.6L13.7 2.3A8 8 0 0119.3 0H24v24H0z" fill="%23000"/%3E%3C/svg%3E'),none,none,none,linear-gradient(#000, #000),linear-gradient(#000, #000),linear-gradient(#000, #000),linear-gradient(#000, #000),linear-gradient(#000, #000);
+    -webkit-mask-size: 28px 28px,0px 0px,0px 0px,0px 0px,calc(100% - 26px) 29px,1px calc(100% - 26px),calc(100% + 2px) calc(100% - 26px),1px calc(100% + 2px),calc(100% + 2px) 1px;
+    -webkit-mask-position: left top,right top,right bottom,left bottom,27px top,left 27px,-1px 27px,right -1px,-1px bottom;
+    -webkit-mask-repeat: no-repeat;
+    .icon{
+        width: 1rem;
+        height: 0;
+        margin-right: 0.25rem;
+        display: inline-block;
+        position: relative;
+        font-size: 1.5rem;
+        svg, i.las{
+            position: absolute;
+            top: -18px;
+            left: -2px;
+        }
+    }
+
+    &.btn-sm{
+        font-size: 0.75rem;
+        padding: 0.625rem 1rem;
+        .icon{
+            font-size: 1rem;
+            width: 0.75rem;
+            height: 0;
+            svg, i.las{
+                top:-12px;
+                left: 0px;
+            }
+        }
+    }
+
+    &.btn-lg{
+        font-size: 1.125rem;
+        line-height: 1.125rem;
+        padding: 1.125rem 1.5rem;
+        .icon{
+            font-size: 2rem;
+            width: 1.125rem;
+            height: 0;
+            svg, i.las{
+                top:-22px;
+                left:-6px;
+            }
+        }
+    }
+}
+
+.btn-primary {
+    border:none;
+    background: $sc-orange;
+    &:hover,&.hover{
+        background: $sc-orange-light;
+    }
+    &:focus,&.focus{
+        background: $sc-orange-light;
+        box-shadow: 0 1px 6px 0 $gray-300;
+    }
+    &:active,&.active{
+        background: $sc-orange;
+    }
+    &:disabled,&.disabled{
+        background: $gray-300;
+        color: $gray-600;
+        opacity: 1;
+    }
+}
+
+.btn-outline-primary {
+    border: solid 1px $brh-blue;
+    color: $brh-blue;
+    background-color: $white;
+    font-weight: 600;
+    &-gray{
+        border: solid 1px $gray-500;
+        color: $gray-500;
+    }
+    &:hover,&.hover{
+        border: 1px solid $btn-hover-blue;
+        color: $btn-hover-blue;
+        background-color: $white;
+    }
+    &:focus,&.focus{
+        border: 1px solid $btn-hover-blue;
+        color: $btn-hover-blue;
+        box-shadow: 0 1px 6px 0 $gray-300;
+    }
+    &:active,&.active{
+        border: 1px solid $drk-blue;
+        color: $drk-blue;
+        background-color: $white;
+    }
+    &:disabled,&.disabled{
+        border-color: $gray-300;
+        color: $gray-600;
+        opacity: 1;
+    }
+}
+
+.btn-secondary,.bg-black-blue .btn-primary {
+    border:none;
+    background-color: $brh-gold;
+    background-image: linear-gradient(225deg, $brh-gold 0%, $gold 100%);
+    color: $black-blue;
+    &:hover,&.hover{
+        background: $brh-gold;
+        background-color: $brh-gold;
+    }
+    &:focus,&.focus{
+        background: $brh-gold;
+        box-shadow: 0 0 5px 2px $brh-turqs;
+    }
+    &:active,&.active{
+        background: $gold;
+    }
+    &:disabled,&.disabled{
+        opacity: 0.4;
+    }
+}
+
+.btn-outline-secondary, .bg-black-blue .btn-outline-primary {
+    padding: 1rem 1.3rem;
+    border: solid 1px transparent;
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(225deg, $brh-gold 0%, $gold 100%);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    box-shadow: 2px 1000px 1px $black-blue inset;
+    color: $gold;
+    &:hover,&.hover{
+        border: 1px solid $brh-gold;
+        color: $brh-gold;
+    }
+    &:focus,&.focus{
+        border: 1px solid $brh-gold;
+        color: $brh-gold;
+        box-shadow: 0 0 5px 2px $brh-turqs;
+        background: transparent;
+    }
+    &:active,&.active{
+        border: 1px solid $gold;
+        color: $gold;
+    }
+    &:disabled,&.disabled{
+        opacity: 0.4;
+        color: $brh-gold;
+    }
+}

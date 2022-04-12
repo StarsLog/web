@@ -1,0 +1,15 @@
+@import "../../../styles/theme/bs_variables";
+$footer-bg: $sc-blue-dark;
+
+.footer{
+    background-color: $footer-bg;
+    color: $gray-600;
+    font-size: 0.875rem;
+    color: $gray-500;
+    min-height: 181px;
+    :global{
+        .cm-icon{
+            width: 64px;
+        }
+    }
+}

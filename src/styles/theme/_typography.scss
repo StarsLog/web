@@ -1,0 +1,196 @@
+@import "../fonts/univiapro/univiapro.scss";
+
+h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
+    font-weight: 700;
+    color: $blue;
+    font-family: 'Quantico', sans-serif;
+    .bg-black-blue &{
+        color: $gold;
+    }
+    &.secondary{
+        color: $drk-turqs;
+        .bg-black-blue &{
+            color: $brh-turqs;
+        }
+    }
+    &.tertiary{
+        color: $black;
+        .bg-black-blue &{
+            color: $white;
+        }
+    }
+
+}
+h1, .h1 {
+    font-size: 4rem;
+    line-height: 83px;
+}
+h2, .h2 {
+    font-size: 2.75rem;
+    line-height: 57px;
+    @include media-breakpoint-down(lg) {
+        font-size: 40px;
+        letter-spacing: 3px;
+        line-height: 48px;
+    }
+}
+h3, .h3 {
+    font-size: 2rem;
+    line-height: 42px;
+    @include media-breakpoint-down(lg) {
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+    }
+}
+h4, .h4 {
+    font-size: 1.5rem;
+    line-height: 31px;
+}
+h5, .h5 {
+    font-size: 1.25rem;
+    line-height: 21px;
+}
+h6, .h6 {
+    font-size: 1.125rem;
+    line-height: 21px;
+}
+
+.display{
+    &-1,&-2,&-3,&-4,&-5,&-6{
+        font-weight: 100;
+        color: $drk-blue;
+        letter-spacing: 0;
+        margin-bottom: 0.5rem;
+        .bg-black-blue &{
+            color: $lght-gold;
+        }
+    }
+    &-1{
+        font-size: 4rem;
+        line-height: 70px;
+    }
+    &-2{
+        font-size: 2.75rem;
+        line-height: 62px;
+    }
+    &-3{
+        font-size: 2rem;
+        line-height: 48px;
+    }
+    &-4{
+        font-size: 1.5rem;
+        line-height: 30px;
+    }
+    &-5{
+        font-size: 1rem;
+        line-height: 30px;
+    }
+    &-6{
+        font-size: 0.8rem;
+        line-height: 28px;
+    }
+    @include media-breakpoint-down(lg) {
+        &-3{
+            font-size: 1.5rem;
+            line-height: 1.5rem;
+        }
+    }
+}
+
+.caption{
+    &-1,&-2,&-3,&-4,&-5{
+        color: $black-blue;
+        text-transform: uppercase;
+        font-weight: 900;
+        .bg-black-blue &{
+            color: $white;
+        }
+    }
+
+    &-1{
+        font-size: 2.75rem;
+        letter-spacing: 8px;
+        line-height: 44px;
+    }
+    &-2{
+        font-size: 2rem;
+        letter-spacing: 6px;
+        line-height: 36px;
+    }
+    &-3{
+        font-size: 1.5rem;
+        letter-spacing: 5px;
+        line-height: 26px;
+    }
+    &-4{
+        font-size: 1.125rem;
+        letter-spacing: 4px;
+        line-height: 22px;
+    }
+    &-5{
+        letter-spacing: 2px;
+        line-height: 18px;
+        @include media-breakpoint-down(lg) {
+            font-size: 14px;
+        }
+    }
+}
+
+.subtitle{
+    text-align: center;
+    color: $gray-600;
+    font-weight: 200;
+    line-height: 2rem;
+    letter-spacing: 1px;
+    font-size: 1.125rem;
+    &.small{
+        font-size: 15px;
+    }
+}
+
+.fw-600{
+    font-weight: 600;
+}
+.fs{
+    &-6-5{
+        font-size: 1.125rem;
+    }
+    &-7{
+        font-size: 0.875rem;
+    }
+    &-8{
+        font-size: 0.75rem;
+    }
+}
+
+a{
+    color: $brh-blue;
+    text-decoration: none;
+    cursor: pointer;
+    &:hover{
+        color: $blue;
+        text-decoration: underline;
+        text-decoration-color: $blue;
+    }
+    .bg-black-blue &{
+        color: $brh-gold;
+        &:hover{
+            color: $gold;
+            text-decoration-color: $gold;
+        }
+    }
+}
+
+.link{
+    font-size: 1.125rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    color: $brh-blue;
+    display: block;
+    margin-top: .75rem;
+
+    &:hover{
+        text-decoration: underline;
+    }
+}
